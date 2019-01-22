@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Trivia</title>
+    <!-- Linking JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <!-- Linking Cascading Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Local Styles -->
+    <style type="text/css"></style>
+
+</head>
+<body>
+<!-- 
+Option One: Basic Quiz (Timed Form)
+
+[Watch the Demo](https://youtu.be/fBIj8YsA9dk)
+
+You'll create a trivia form with multiple choice or true/false options (your choice).
+
+The player will have a limited amount of time to finish the quiz. 
+
+The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
+
+Don't let the player pick more than one answer per question.
+
+Don't forget to include a countdown timer.
+-->
+
+<a name="top"></a>
+
+<div id="Container">
+    <div id="Display">
+        <div id="Title" style="border:0px solid red;">
+                
+
+            <div style="border:0px solid red; position:relative; height:50px;">
+                
+                <!-- this was a little b--ch! -->
+                <img style="position:absolute; left:170px; border:0px solid blue; height:50px; width:50px; vertical-align: middle;" src="assets/images/js-logo-50x50.gif">
+                <div style="position:absolute; bottom:0px; left:220px; font-size:26px; font-weight:normal; border:0px solid purple; height:auto; width:250px; line-height: 50px;">JavaScript Trivia</div>
+               
+            </div>
+                  
+ 
+            <!-- <a href="https://youtu.be/fBIj8YsA9dk" target="_blank">https://youtu.be/fBIj8YsA9dk</a> -->
+        </div>
+         <!-- =================================================== -->
+        <section id="Start"> 
+            <hr>
+            <img style="height:194px; width:620px;" src="assets/images/screen-620x194.png"> 
+            <br><br><br>  
+             <p>Welcome to JavaScript Trivia! Test your knowledge of this popular programming language by answering a few basic questions.<br>       
+                <br>You will have <span style="font-weight:bold;">60</span> seconds to answer <span style="font-weight:bold;">10</span> questions. At the end, you will see how many questions you answered correctly, how many you answered incorrectly and how many you left unanswered...</p>   
+                     
+            <div id="StartButton"><button>Begin</button></div>
+        </section>
+         <!-- =================================================== -->
+        <section id="Questions">
+                <hr>
+                <div id="Time">  
+                    <h2>Time Remaining:&nbsp;<span id="time">0</span>&nbsp;seconds</h2>
+                </div>
+      
+                <ul><div class="Question">1. Who is credited with having created JavaScript?</div>
+                    <li><input type="radio" name="question-1" value="Tim Berners-Lee">Tim Berners-Lee</li>
+                    <li><input type="radio" name="question-1" value="Brendan Eich">Brendan Eich</li>
+                    <li><input type="radio" name="question-1" value="James Gosling">James Gosling</li>
+                    <li><input type="radio" name="question-1" value="Ryan Gosling">Ryan Gosling</li>         
+                </ul>
+                 <!-- 1990, 1993, 1995(*), 1998 -->
+
+                <ul><div class="Question">2. In what year was JavaScript created?</div>
+                    <li><input type="radio" name="question-2" value="1990">1990</li>
+                    <li><input type="radio" name="question-2" value="1993">1993</li>
+                    <li><input type="radio" name="question-2" value="1995">1995</li>
+                    <li><input type="radio" name="question-2" value="1998">1998</li>
+                </ul>
+                <!--  America Online (AOL), Netscape(*), Microsoft, AltaVista, Apple -->
+ 
+                <ul><div class="Question">3. Which corporation was responsible for introducing JavaScript to the world?</div>
+                    <li><input type="radio" name="question-3" value="Apple">Apple</li>
+                    <li><input type="radio" name="question-3" value="America Online (AOL)">America Online (AOL)</li>
+                    <li><input type="radio" name="question-3" value="AltaVista">AltaVista</li>
+                    <li><input type="radio" name="question-3" value="Netscape">Netscape</li>
+                    <li><input type="radio" name="question-3" value="Microsoft">Microsoft</li>
+                </ul>
+
+                <!-- JS(*), Java, VScript, TypeScript -->
+    
+                <ul><div class="Question">4. Which is the correct abbreviation for describing standard "vanilla" JavaScript?</div>
+                    <li><input type="radio" name="question-4" value="TypeScript">TypeScript</li>
+                    <li><input type="radio" name="question-4" value="Java">Java</li>
+                    <li><input type="radio" name="question-4" value="VScript">VScript</li>
+                    <li><input type="radio" name="question-4" value="JS">JS</li>
+                </ul>
+                <!-- React(*), Reaction, jsQuery -->
+
+                <ul><div class="Question">5. Which of the following is a poplular JavaScript library?</div>
+                    <li><input type="radio" name="question-5" value="Reaction">Reaction</li>
+                    <li><input type="radio" name="question-5" value="React">React</li>
+                    <li><input type="radio" name="question-5" value="jsQuery">jsQuery</li>
+                </ul>
+                <!-- AngularJS(*), Mocha, Tinder.js, Vu.js -->
+
+                <ul><div class="Question">6. Which of the following is a poplular JavaScript framework?</div>
+                    <li><input type="radio" name="question-6" value="AngularJS">AngularJS</li>
+                    <li><input type="radio" name="question-6" value="Mocha">Mocha</li>
+                    <li><input type="radio" name="question-6" value="Tinder.js">Tinder.js</li>
+                    <li><input type="radio" name="question-6" value="Vu.js">Vu.js</li>
+                </ul>
+                <!-- It is compiled., It is interpeted.(*), It is encoded., It is executed. -->
+
+                <ul><div class="Question">7. How does JavaScript differ from most other programming languages?</div>
+                    <li><input type="radio" name="question-7" value="It is executed">It is executed</li>
+                    <li><input type="radio" name="question-7" value="It is encoded">It is encoded</li>
+                    <li><input type="radio" name="question-7" value="It is compiled">It is compiled</li>
+                    <li><input type="radio" name="question-7" value="It is interpreted">It is interpreted</li>
+                </ul>
+                <!-- Enablling interactive web pages and web applications.(*), Performing numeric computation and scientific computing., Developing desktop and server applications., Managing data stored in databases. -->
+ 
+                <ul><div class="Question">8. What has JavaScript traditionally been used for?</div>
+                    <li><input type="radio" name="question-8" value="Performing numeric computations">Performing numeric computations</li>
+                    <li><input type="radio" name="question-8" value="Managing data stored in databases">Managing data stored in databases</li>
+                    <li><input type="radio" name="question-8" value="Enabling interactive web pages and web applications">Enabling interactive web pages and web applications</li>
+                    <li><input type="radio" name="question-8" value="Developing desktop and server applications">Developing desktop and server applications</li>
+                </ul>
+                <!-- Your workplace., A Browser.(*), A Server. -->
+
+                <ul><div class="Question">9. With the advent of Node.js, JavaScript can now be run outside of what?</div>
+                    <li><input type="radio" name="question-9" value="A Server">A Server</li>
+                    <li><input type="radio" name="question-9" value="Your Workplace">Your Workplace</li>
+                    <li><input type="radio" name="question-9" value="A Browser">A Browser</li>
+                </ul>
+                <!-- Inline 4, V6, V8(*), Turbo -->
+
+                <ul><div class="Question">10. Google Chrome has this kind of JavaScript engine under its hood?</div>
+                    <li><input type="radio" name="question-10" value="Turbo">Turbo</li>
+                    <li><input type="radio" name="question-10" value="Inline 4">Inline 4</li>
+                    <li><input type="radio" name="question-10" value="V6">V6</li>
+                    <li><input type="radio" name="question-10" value="V8">V8</li>
+                </ul>
+                <hr>
+                <div style="text-align:center;"><a href="#top">Back to Top</a></div>
+        </section>
+        <!-- =================================================== -->
+        <section id="Result">
+                <hr>
+                <div id="Time">  
+                        <h2>Time's Up!</h2>
+                </div>
+                <!-- <p>Here's how you did...</p> -->          
+                <div id="Results">
+                    <h2>Answered Correctly:&nbsp;<span id="correct">0</span></h2><br>           
+                    <h2>Answered Incorrectly:&nbsp;<span id="wrong">0</span></h2><br>          
+                    <h2>Unanswered:&nbsp;<span id="unanswered">0</span></h2>
+                </div>  
+                <div style="font-size:18px; padding-top:10px; padding-bottom:20px;" id="grade"></div>
+                <p style="border-top:1px solid #ededed; text-align:center; padding-top:20px;">Thanks for playing! <a href="#" onclick="document.location.reload();">Refresh</a> the page to try again.</p>           
+        
+        </section>
+         <!-- =================================================== -->
+    </div>
+</div>
+
+<!-- Local Script -->
+<script></script>
+    
+</body>
+</html>

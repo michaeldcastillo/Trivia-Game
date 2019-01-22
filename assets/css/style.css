@@ -1,0 +1,175 @@
+
+    /*html *
+    {
+        border:1px solid red;
+    }*/
+        /*
+    .correct
+    {
+        font-weight:bold;
+    }*/
+    html
+    {
+        height:100%; /* required to expand the body background gradient to the full height of the window */
+    }
+
+    body
+    {
+        height:auto;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:14px;
+        padding-bottom:20px;
+        background: #f7df1e; /* fallback color */
+        background-image: url("../images/background-image-800x80.png"); /* fallback image */
+        background-image: url("../images/background-image-800x80.png"), linear-gradient(to bottom, #bca802, #f7df1e); /* light to dark */
+        background-repeat: repeat, no-repeat; /* repeat image, do not repeat gradient */
+    }
+
+    hr
+    {
+        border:1px solid #ededed;
+    }
+   
+    p
+    {
+        border:0px solid blue;
+        text-align:left;
+        font-size:16px;
+        line-height:1.5;
+    }
+
+    #StartButton
+    {
+        border:0px solid green;
+        padding:20px 0px 0px 0px;
+    }
+
+    button
+    {
+        background-color:#ededed;
+        width:100px;
+        height:50px;
+        border-radius:10px;
+        font-size:18px;
+    }
+
+    button:focus 
+    { 
+        outline: none; 
+    }
+
+    h1
+    {
+        font-weight:bold;
+        font-size:26px;
+    }
+
+    h2
+    {
+        font-weight:bold;
+        font-size:18px;
+    }
+
+    ul
+    {
+        border-top:1px solid #ededed;
+        /*background-color:pink;*/
+        padding:10px 0px 20px 0px;
+       
+    }
+
+    li
+    {
+        /*background-color:cornsilk;*/
+        border:0px solid orange;
+        padding:5px 0px 5px 40px;
+    }
+
+    div
+    {
+        border:0px solid red;
+        padding:0px 0px 0px 0px;
+    }
+
+    section
+    {
+        border:0px solid purple;
+        padding:0px 0px 0px 0px;
+    }
+
+    #Container
+    {
+        border:0px solid blue;
+        text-align: center;
+        padding-top:20px;
+    }
+
+    #Display
+    {
+        border:0px solid purple;
+        border-radius:20px; 
+        display:inline-block; 
+        text-align:left; 
+        width:660px; 
+        height:auto; 
+        background-color:white;
+    }
+
+    #Title
+    {
+        text-align:center;
+        padding:20px 0px 0px 0px;
+    }
+
+    #Start
+    {
+        padding:0px 20px 20px 20px;
+        border:0px solid red;
+        text-align:center;
+        /*min-height:200px;*/
+    }
+
+     #Questions
+    {
+        border:0px solid orange;
+        padding:0px 20px 20px 20px;
+        display:none;
+    }
+
+    .Question
+    {
+        font-weight:bold;
+        font-size:16px;
+        padding:0px 0px 10px 0px;
+        border:0px solid green;
+    }
+
+    #Time
+    {
+        text-align:center;
+        padding:5px 0px 10px 0px;
+        color:red;
+    }
+
+    #Result
+    {
+        display:none;
+        border:0px solid darkmagenta;
+        padding:0px 20px 20px 20px;
+        text-align:center;
+        /* min-height:200px; */
+    }
+
+    #Result a
+    {
+        font-weight:bold;
+    }
+
+    #Results
+    {
+        border:0px solid green;
+        padding:20px 0px 20px 0px;
+        text-align:left;
+        width:auto;
+        display:inline-block;
+    }
