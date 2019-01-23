@@ -95,7 +95,7 @@ function startTrivia() {
             $("#grade").html('<span style="background-color:yellow;">Good job. You scored a "B".</span><br><br><img src="assets/images/grade-B-75x75.png">');
         } else if(sumCorrect <8 && sumCorrect >= 7) {
             //console.log("C");
-            $("#grade").html('<span style="background-color:yellow;">Not bad. You scored an "C".</span><br><br><img src="assets/images/grade-C-75x75.png">');
+            $("#grade").html('<span style="background-color:yellow;">Not bad. You scored a "C".</span><br><br><img src="assets/images/grade-C-75x75.png">');
         } else {
             //console.log("D");
             $("#grade").html("<span style='background-color:yellow;'>Hmm, you didn't do so well. Better luck next time!");
